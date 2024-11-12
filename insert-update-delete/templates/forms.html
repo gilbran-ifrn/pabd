@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transações SQL</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        fieldset {
+            margin: 10px;
+            border: 1px solid rgba(65, 142, 209, 0.423);;
+            border-radius: 5px;
+            padding: 10px;
+            width: 30%;
+        }
+
+        label, input, button {
+            display: block;
+            margin: 10px 0px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset><legend>INSERT INTO</legend>
+        <form action="/insercao" method="post">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome">
+
+            <label for="raca">Raça</label>
+            <input type="text" name="raca" id="raca">
+
+            <button type="submit">INSERIR</button>
+        </form>
+    </fieldset>
+
+    <fieldset><legend>UPDATE</legend>
+        <form action="/atualizacao" method="post">
+            <label for="id">ID</label>
+            <input type="text" name="id" id="id">
+
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome">
+
+            <label for="raca">Raça</label>
+            <input type="text" name="raca" id="raca">
+
+            <button type="submit">ATUALIZAR</button>
+        </form>
+    </fieldset>
+
+    <fieldset><legend>DELETE FROM</legend>
+        <form action="/remocao" method="post">
+            <label for="id">ID</label>
+            <input type="text" name="id" id="id">
+
+            <button type="submit">REMOVER</button>
+        </form>
+    </fieldset>
+</body>
+</html>
