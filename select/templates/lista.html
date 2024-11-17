@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultas SQL</title>
+</head>
+<body>
+    {% if lTotal | length > 0 %}
+    Total de dados: {{ lQnt['qnt'] }}
+    <table>
+        <thead>
+            <td>id</td>
+            <td>Nome</td>
+            <td>Raça</td>
+        </thead>
+        <tbody>
+            {% for linha in lTotal %}
+            <tr>
+                <td>{{ linha['id'] }}</td>
+                <td>{{ linha['nome'] }}</td>
+                <td>{{ linha['raca'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <h1>O banco não possui dado</h1>
+    {% endif %}
+</body>
+</html>
