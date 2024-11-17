@@ -13,7 +13,7 @@ def conectaBD():
     #cnx = mysql.connector.connect(
     cnx = connection.MySQLConnection(
         user='root',
-        password='senharoot',
+        password='labinfo',
         host='127.0.0.1',
         database='petshop')
     
